@@ -19,8 +19,8 @@ while moveMap[board] in moveMap:
     cls()
     display(board)
     move = int(input(" Next move (1->9):\n  1 2 3\n  4 5 6\n  7 8 9\n Enter your next move: "))
-    while (board[move - 1] != ' '):
-        move = int(input())
+    while (not move in range(1, 10)) or board[move - 1] != ' ':
+        move = int(input(" Enter your next move: "))
     board = board[:(move - 1)] + "OX"[playerFirst] + board[move:]
     if moveMap[board] in moveMap:
         board = moveMap[board]
