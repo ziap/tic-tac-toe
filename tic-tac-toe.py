@@ -1,4 +1,3 @@
-import sys
 from lookup import moveMap
 from os import name, system
 def cls():
